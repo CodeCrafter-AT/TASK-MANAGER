@@ -1,0 +1,130 @@
+body {
+  --bg-color: white;
+  --text-color: black;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.dark-mode {
+  --bg-color: #696161;
+  --text-color: #070101;
+}
+
+.App {
+  text-align: center;
+  padding: 28px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 8px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Add spacing and cleaner layout */
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #470c0c;
+  border-radius: 5px;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.task-buttons button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #593131;
+}
+
+/* Priority-based background colors */
+.low-priority {
+  background-color: lightgreen;
+}
+
+.medium-priority {
+  background-color: yellow;
+}
+
+.high-priority {
+  background-color: red;
+}  
+
+.overdue {
+  background-color: #705c5c; /* Dark red for overdue tasks */
+  text-decoration: line-through;
+} 
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.task.overdue {
+  background-color: #ffdddd; /* Highlight overdue tasks in red */
+}
+
+.task-buttons button {
+  margin-left: 5px;
+}
+
+.edit-btn {
+  background-color: #ffeb3b;
+}
+
+.complete-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #010101;
+  color: white;
+}
+
+.task-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.task-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .task-manager {
+    flex-direction: column;
+  }
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
